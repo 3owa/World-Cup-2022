@@ -8,21 +8,31 @@ body {
     align-items: center;
     background-image: url(https://tinyurl.com/mr8etb3n);
     background-size: 80%;
+    
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #470217;
-    padding: 15px;
-    width: 98%;
+    padding: 15px 30px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the navbar is on top */
 }
 
-.navbar img {
-    width: 50px;
+.navbar .logo {
+    margin-bottom: 10px; /* Space between logo and navigation links */
+}
+
+.navbar .logo img {
+    width: 150px; /* Adjust size as needed */
     height: auto;
 }
 
@@ -31,10 +41,11 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Center the nav items horizontally */
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0 10px; /* Space between each link */
 }
 
 .nav-links a {
@@ -42,11 +53,17 @@ body {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #5d0f0c; /* Darker shade for better visibility */
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    background-color: #3d0b0a; /* Even darker shade on hover */
 }
+
+/* Add padding to the body to prevent content overlap */
 
 /* Container holding both tables */
 .container {
