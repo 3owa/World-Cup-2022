@@ -55,7 +55,7 @@ body {
     padding: 20px;
 }
 
-/* Information Table Styles (on the left) */
+/* Container for Information Table */
 .info-table {
     width: 40%;
     background-color: white;
@@ -65,36 +65,37 @@ body {
     margin-right: 20px;
 }
 
-.info-table h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
+/* Table Styling */
 .info-table table {
     width: 100%;
     border-collapse: collapse;
+    /* No height constraints here */
 }
 
+/* Table Header and Cell Styling */
 .info-table th, .info-table td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
+/* Header Styling */
 .info-table th {
     background-color: #470217;
     color: white;
     text-align: left;
 }
 
+/* Cell Styling */
 .info-table td {
     background-color: #f9f9f9;
 }
 
+/* Hover Effect */
 .info-table tr:hover {
     background-color: #f1f1f1;
 }
+
 
 /* Match Table Styles */
 .match-table {
@@ -139,5 +140,77 @@ body {
     .info-table, .match-table {
         width: 90%;
         margin-bottom: 20px;
+    }
+}
+
+
+
+/* Popup Container */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border: 2px solid #470217; /* Border color */
+    border-radius: 12px; /* Medium corner radius */
+    width: 80%; /* Width can be adjusted */
+    max-width: 600px; /* Max width for large screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Close Button */
+.close-btn {
+    color: #470217;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Popup Title */
+#popup-title {
+    margin-top: 0;
+    font-size: 24px;
+    color: #470217;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Popup Details */
+.popup p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Specific Styles for Details */
+#popup-home-team,
+#popup-away-team {
+    font-weight: bold;
+}
+
+/* Responsive Design for Popup */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        margin: 15% auto;
     }
 }
