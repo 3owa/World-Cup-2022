@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(https://tinyurl.com/mr8etb3n);
+    background-size: 80%;
 }
 
 /* Navigation Bar */
